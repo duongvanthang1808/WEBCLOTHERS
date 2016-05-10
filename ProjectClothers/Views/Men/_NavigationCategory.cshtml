@@ -1,0 +1,6 @@
+﻿@model IEnumerable<ProjectClothers.Models.Entities.ProductCategory>
+
+@foreach (var item in Model)
+{
+    <li><a href="/men-@item.ID-@item.Name">@item.Name</a></li>
+}

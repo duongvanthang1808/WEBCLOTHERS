@@ -1,0 +1,31 @@
+﻿@model List<ProjectClothers.Models.Function.Cart>
+
+<li class="checkout">
+    <a href="/cart">
+        <span class="cart">$ @(Model.Sum(x => x.product.Price))</span>
+        <span class="check">Checkout</span>
+    </a>
+    <div class="shopping">
+        @if (Model.Count == 0)
+        {
+            <h5>Your Shopping Cart is empty.</h5>
+            <p>Give it purpose—fill it with books, movies, mobiles, cameras, toys and fashion jewellery.</p>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <div style="padding:2px;border-bottom:1px dotted">
+                    <div class="col-md-4 related-left-left">
+                        <img src="~/Content/client/images/@item.product.Image" alt="" />
+                    </div>
+                    <div class="col-md-8 related-left-right">
+                        <h4>@item.product.Name</h4>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            }
+            <a type="button" class="btn btn-primary" href="/cart">See shopping bag</a>
+        }
+    </div>
+</li>

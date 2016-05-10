@@ -1,0 +1,168 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biruang an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Biruang Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstarp-css -->
+    <link href="~/Content/client/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// bootstarp-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="~/Content/client/css/style.css" type="text/css" media="all" />
+    <!--// css -->
+    <script src="~/Content/client/js/jquery.min.js"></script>
+    <!--fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <!--/fonts-->
+    <!-- dropdown -->
+    <script src="~/Content/client/js/jquery.easydropdown.js"></script>
+    <link href="~/Content/client/css/nav.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/Content/client/js/scripts.js" type="text/javascript"></script>
+    <!--js-->
+    <!--/js-->
+    @RenderSection("Script", false)
+
+
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <!-- container -->
+        <div class="container">
+            <!-- header-top -->
+            <div class="header-top">
+                <div class="header-logo">
+
+                    <a href='@Url.Action("Index","Home")'><img src="~/Content/client/images/logo.png" alt="" /></a>
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <li class="phone">+841642474811</li>
+                        <li class="mail"><a href="mailto:dvthang1808@mail.com">dvthang1808@gmail.com</a></li>
+                        @{Html.RenderAction("HeaderCart", "Home");}
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <!-- //header-top -->
+            @Html.Partial("_Navigation")
+            <div class="search">
+                <form>
+                    <input type="text" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}" required="">
+                </form>
+            </div>
+            <div class="clearfix"> </div>
+            <!-- script-for-menu -->
+            <script>
+                $("span.menu").click(function () {
+                    $(" ul.nav").slideToggle("slow", function () {
+                    });
+                });
+            </script>
+        </div>
+        <!-- //container -->
+    </div>
+    @RenderBody()
+    <!-- footer -->
+    <div class="footer">
+        <!-- container -->
+        <div class="container">
+            <div class="col-md-3 stores-grid">
+                <div class="stores">
+                    <h3>Our Stores</h3>
+                    <ul>
+                        <li>Feel free to visit our stores or contact us.</li>
+                        <li>1401 South Grand Avenue </li>
+                        <li>Los Angeles, CA 90015 </li>
+                        <li>(213) 748-2411</li>
+
+                        <span>
+                            <li class="drive">100 Fairview Drive </li>
+                            <li>Franklin, VA 23851</li>
+                            <li>(757) 569-6100 </li>
+                        </span>
+                    </ul>
+                </div>
+                <div class="social-icons white-icons">
+                    <ul>
+                        <li><a href="#" class="facebook"></a></li>
+                        <li><a href="#" class="twitter"></a></li>
+                        <li><a href="#" class="chrome"></a></li>
+                        <li><a href="#" class="vimeo"></a></li>
+                        <li><a href="#" class="rss"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 blog">
+                <h3>Blog posts</h3>
+                <a href="#">Justin Bieber confirmed that he is gay.</a>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Donec sed auctor elit.
+                </p>
+                <a href="#">New sexy sport clothes are here!</a>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Donec sed auctor elit.
+                </p>
+                <a href="#">Summer sales are coming!</a>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Donec sed auctor elit.
+                </p>
+            </div>
+            <div class="col-md-3 support">
+                <h3>Support</h3>
+                <div class="support-grids">
+                    <div class="support-left">
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Payment</a></li>
+                            <li><a href="#">Refunds</a></li>
+                            <li><a href="#">Track Order</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Privacy & Security</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Corporate Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="support-left support-right">
+                        <ul>
+                            <li><a href="#">Sizing</a></li>
+                            <li><a href="#">Ordering</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                            <li><a href="#">Find A Store </a></li>
+                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Sign Up & Save</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="col-md-3 contact">
+                <h3>Contact us</h3>
+                <form>
+                    <input type="text" value="your e-mail..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your e-mail...';}" required="">
+                    <textarea value="your text...:" onfocus="if(this.value == 'your text...') this.value='';" onblur="if(this.value == '') this.value='your text...';">your text...</textarea>
+                    <input type="submit" value="Send MESSAGE">
+                </form>
+            </div>
+            <div class="clearfix"> </div>
+            <div class="copyright">
+                <p>Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+
+            </div>
+            <!-- // container -->
+        </div>
+        <!-- //footer -->
+</body>
+</html>

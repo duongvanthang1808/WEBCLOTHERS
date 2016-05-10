@@ -1,0 +1,83 @@
+﻿@model ProjectClothers.Models.Entities.Product
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Name)
+                            @Html.DisplayFor(model => model.Name)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.CreatedBy)
+                            @Html.DisplayFor(model => model.CreatedBy, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.CreatedDate)
+                            @Html.DisplayFor(model => model.CreatedDate, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Decription)
+                            @Html.DisplayFor(model => model.Decription, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.CategoryId)
+                            @Html.DisplayFor(model => model.CategoryId, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Image)
+                            @Html.DisplayFor(model => model.Image, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.MoreImage)
+                            @Html.DisplayFor(model => model.MoreImage, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Price)
+                            @Html.DisplayFor(model => model.Price, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Quantity)
+                            @Html.DisplayFor(model => model.Quantity, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Status)
+                            @Html.DisplayFor(model => model.Status, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.DisplayNameFor(model => model.Sex)
+                            @Html.DisplayFor(model => model.Sex, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
